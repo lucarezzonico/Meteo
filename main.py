@@ -6,11 +6,8 @@ SILENCE = False
 def startThreads(manager, silence):
     guiState = manager.dict()
     guiStateInit(guiState)
-
     pGUI = mp.Process(target=runGUI, args=(guiState, silence))
-    
     pGUI.start()
-    
     pGUI.join()
 
 if __name__ == "__main__":

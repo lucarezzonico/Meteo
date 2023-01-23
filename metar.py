@@ -192,7 +192,7 @@ class Report:
     def __post_init__(self) -> None:
         self.report_type = ""
         if self.type in VALID_TYPES_OF_REPORT:
-            self.report_type += " " + self.type
+            self.report_type += self.type
 
 @dataclass
 class Station:
