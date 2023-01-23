@@ -1,7 +1,10 @@
 # Meteo
 
+## Preview
+![preview of GUI](gui_screenshot.png)
+
 ## Installation
-### from source:
+### From Source:
 Clone the Meteo repo:
 ```shell
 git clone https://github.com/lucarezzonico/Meteo.git && cd Meteo
