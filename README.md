@@ -4,7 +4,7 @@
 ### from source:
 Clone the Meteo repo:
 ```shell
-  $ git clone https://github.com/lucarezzonico/Meteo.git && cd Meteo
+git clone https://github.com/lucarezzonico/Meteo.git && cd Meteo
 ```
 Install Python:
 - For Ubuntu:
