@@ -7,24 +7,24 @@ defaults:
     
 METAR:
     Wind:
-        direction: 30                   # in degrees
         force: 4                        # in Knots
         direction_left: 10              # in degrees
         direction_right: 80             # in degrees
-        gusts: 15                       # in Knots
+        gusts:                          # in Knots
     Visibility:
         prevailing_distance: 10000      # in meters
         smallest_distance: 3000         # in meters
         smallest_direction: SW          # N, S, E, W, NE, NW, SE, SW
     Clouds:
-        crowd_1: FEW               # FEW (1-2/8), SCT (3-4/8), BKN (5-7/8), OVC (8/8) or None
-        height_1": 1000            # height in meters
-        crowd_2: SCT               # SCT (3-4/8), BKN (5-7/8), OVC (8/8) or None
-        height_2": 2000            # height in meters
-        crowd_3: BKN               # BKN (5-7/8), OVC (8/8) or None
-        height_3": 4000            # height in meters
+        crowd_1: FEW                    # FEW (1-2/8), SCT (3-4/8), BKN (5-7/8), OVC (8/8) or None
+        height_1": 1000                 # height in meters above ground level
+        crowd_2: SCT                    # SCT (3-4/8), BKN (5-7/8), OVC (8/8) or None
+        height_2": 2000                 # height in meters above ground level
+        crowd_3: BKN                    # BKN (5-7/8), OVC (8/8) or None
+        height_3": 4000                 # height in meters above ground level
     Temperature_and_DewPoint:
         temperature: 9.5                # in degrees
         dewPoint: -1.5                  # in degrees
     AirPressure:
         QFE: 949                        # Stationsdruck in hPa
+        
