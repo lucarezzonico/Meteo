@@ -17,4 +17,4 @@ sudo apt-get install python3.9-dev
 ```
 
 Install Miniconda:
-download from [miniconda website](https://conda.io/en/latest/miniconda.html)
+download from [miniconda website](https://conda.io/en/latest/miniconda.html){:target="_blank"}
