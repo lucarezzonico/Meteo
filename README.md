@@ -13,8 +13,6 @@ Clone the Meteo repo:
 git clone https://github.com/lucarezzonico/Meteo.git && cd Meteo
 ```
 #### Install Python:
-The program was tested for Python 3.9 on Ubuntu.
-- For Ubuntu:
 ```shell
 sudo apt install python-pip
 sudo add-apt-repository ppa:deadsnakes/ppa
