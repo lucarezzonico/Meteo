@@ -95,7 +95,7 @@ class MainWindow(QMainWindow):
     def saveReport(self):
         # Compute Report History
         if os.path.exists(self.ui.lineEdit_Config_history_path.text()) and len(self.ui.lineEdit_Config_history_path.text())>0:
-            text_file = open("report_history.txt", "a")
+            text_file = open(self.ui.lineEdit_Config_history_path.text() + "/report_history.txt", "a")
             text_file.write(metar.get_Date_and_Time() + ": " + self.metar_report + "\n")
             text_file.close()
             
