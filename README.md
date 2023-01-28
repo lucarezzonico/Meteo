@@ -6,7 +6,7 @@
 ## Installation
 The program was tested for Python 3.9 on Ubuntu.
 
-### on Ubuntu
+### On Ubuntu
 #### From Source:
 Clone the Meteo repo:
 ```shell
@@ -42,8 +42,8 @@ python main.py
 ```
 
 ### On Windows
-#### download:
-download WeatherReport.exe [here](https://github.com/lucarezzonico/Meteo/raw/main/WeatherReport.exe)
+#### Download:
+download WeatherReport.exe from this repo by clicking [here](https://github.com/lucarezzonico/Meteo/raw/main/WeatherReport.exe)
 #### Run GUI
 open and allow WeatherReport.exe
 
