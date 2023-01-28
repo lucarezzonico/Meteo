@@ -11,6 +11,7 @@ def startThreads(manager, silence):
     pGUI.join()
 
 if __name__ == "__main__":
+    mp.freeze_support()
     mp.set_start_method('spawn')
     with mp.Manager() as manager:
         startThreads(manager=manager, silence=SILENCE)
