@@ -8,10 +8,11 @@ from src.gui_setup.MainWindow import Ui_MainWindow
 import yaml
 import pyperclip
 import metar
+from sound import soundStateInit
 
-def runGUI(guiState, silence):
+def runGUI(guiState, soundState, silence):
     app = QApplication(sys.argv)
-    mainwindow = MainWindow(guiState, silence)
+    mainwindow = MainWindow(guiState, soundState, silence)
     mainwindow.cl.log('Starting up')
     # widget = QStackedWidget()
     # widget.addWidget(mainwindow)
@@ -29,7 +30,7 @@ def guiStateInit(guiState):
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, guiState, silence=False, parent=None):
+    def __init__(self, guiState, soundState, silence=False, parent=None):
         super(MainWindow, self).__init__(parent)
         # UI
         self.ui = Ui_MainWindow()
@@ -79,6 +80,7 @@ class MainWindow(QMainWindow):
         
         # COMMUNICATION BETWEEN THREADS
         self.guiState = guiState
+        self.soundState = soundState
         self.cl = CLOG(processName="GUI", timed=True, silence=silence)
         
     def browseFolder(self):
@@ -103,9 +105,11 @@ class MainWindow(QMainWindow):
                                                     
         self.updateReport()
         self.saveReport()
-
-        self.guiState['getReportClicked'] = False
         
+        self.soundState['Lana'] = True
+        
+        self.guiState['getReportClicked'] = False
+            
     def updateReport(self):
         self.ui.lineEdit_METAR_report.setText(self.guiState['metarReport'])
 
@@ -197,5 +201,9 @@ class MainWindow(QMainWindow):
 
 if __name__ == '__main__':
     guiState = Manager().dict()
-    guiState['shutdown'] = False
-    runGUI(guiState, silence=False)
+    guiStateInit(guiState)
+    
+    soundState = Manager().dict()
+    soundStateInit(soundState)
+    
+    runGUI(guiState, soundState, silence=False)
